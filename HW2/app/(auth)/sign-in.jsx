@@ -40,14 +40,15 @@ export default function Signin() {
 
   return (
     <View style={styles.container}>
-      <TextInput
+      <View>
+      <TextInput style={{marginBottom: 20}}
         autoCapitalize="none"
         value={emailAddress}
         keyboardType="email-address"
         placeholder="Email..."
         onChangeText={(email) => setEmailAddress(email)}
       />
-      <TextInput
+      <TextInput  style={{marginBottom: 20}}
         value="{password}"
         placeholder="Password..."
         secureTextEntry={true}
@@ -56,6 +57,7 @@ export default function Signin() {
       <Button mode="outlined" onPress={onSignIn}>
         Sign In
       </Button>
+      </View>
       <View style={styles.signInArea}>
         <Text>Don't have an account?</Text>
         <Link href="/sign-up">
@@ -70,13 +72,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     marginBottom: 120,
   },
   signInArea: {
-    marginTop: 20,
+    marginTop: 40,
     flexDirection: "row",
   },
   link: {

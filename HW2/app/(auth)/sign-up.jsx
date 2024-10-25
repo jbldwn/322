@@ -51,7 +51,7 @@ export default function SignUp() {
     <View>
       {!pendingVerification &&(
         <>
-        <TextInput 
+        <TextInput style={{marginBottom: 20}}
           autoCapitalize='none' 
           value={emailAddress} 
           keyboardType='email-address' 
@@ -62,7 +62,7 @@ export default function SignUp() {
       )}
       {!pendingVerification &&(
         <>
-          <TextInput 
+          <TextInput style={{marginBottom: 20}}
             value={password} 
             placeholder='password...' 
             secureTextEntry={true} 
@@ -97,13 +97,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     marginBottom: 120,
   },
   signInArea: {
-    marginTop: 20,
+    marginTop: 40,
     flexDirection: "row",
   },
   link: {
