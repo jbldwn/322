@@ -47,8 +47,8 @@ export default function SignUp() {
 
   }
   return (
-    <View>
     <View style={styles.container}>
+    <View>
       {!pendingVerification &&(
         <>
         <TextInput 
