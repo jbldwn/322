@@ -47,6 +47,7 @@ export default function SignUp() {
 
   }
   return (
+    <View>
     <View style={styles.container}>
       {!pendingVerification &&(
         <>
@@ -81,12 +82,34 @@ export default function SignUp() {
         </>
       )}
     </View>
+      <View style={styles.signInArea}>
+        <Text>Don't have an account?</Text>
+        <Link href="/sign-up">
+          <Text style={styles.link}>Sign Up</Text>
+        </Link>
+      </View>
+    </View>
   )
 }
 
+
 const styles = StyleSheet.create({
-  container:{
-    display: "flex",
-    flex: 1
-  }
-})
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    marginBottom: 120,
+  },
+  signInArea: {
+    marginTop: 20,
+    flexDirection: "row",
+  },
+  link: {
+    marginLeft: 5,
+    textDecorationLine: "underline",
+    textDecorationStyle: "solid",
+    textDecorationColor: "#000",
+  },
+});
